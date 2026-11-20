@@ -1,0 +1,5 @@
+test_id,attack_type,lab_scope,precondition,procedure,expected_result,actual_result,evidence_file,status,reviewer
+AT-01,Phishing simulation,Isolated consent-based training lab,Mock account only,Run approved simulation without collecting real passwords,MFA and reporting controls reduce compromise,,,, 
+AT-02,Bounded request flood,Local service only,Rate limits configured,Send low-rate bounded traffic within approved limit,Excess requests throttled and logged,,,, 
+AT-03,MITM certificate validation,Isolated client and test proxy,Test CA not trusted,Present untrusted lab certificate,Client rejects connection,,,, 
+AT-04,SQL injection,Intentionally vulnerable training endpoint only,Synthetic data,Run approved safe test payload,Parameterized query prevents query manipulation,,,, 

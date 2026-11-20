@@ -1,0 +1,6 @@
+role,own_profile,other_profile,course_data,service_request,manage_users,system_config
+student,read_write,deny,enrolled_only,own_only,deny,deny
+lecturer,read_limited,deny,assigned_only,assigned_only,deny,deny
+support_officer,masked_read,deny,limited,update_limited,deny,deny
+system_admin,as_required,as_required,as_required,as_required,manage,manage
+service_account,deny,deny,api_scope_only,api_scope_only,deny,deny

@@ -1,0 +1,10 @@
+Illustrative default-deny policy for an isolated lab:
+1. Internet/user VLAN -> reverse proxy: allow TCP 443 only.
+2. Reverse proxy -> application tier: allow configured application port only.
+3. Application tier -> database: allow configured DB TLS port only.
+4. Application tier -> identity provider: allow required OIDC/SAML/LDAP/Kerberos flows only.
+5. Admin VPN subnet -> management endpoints: allow approved admin ports with MFA.
+6. User VLAN -> database/management: deny.
+7. Database -> Internet: deny by default; allow only documented update/backup flows.
+8. Log sources -> central collector: allow authenticated encrypted log transport.
+Review all rules, logging and source/destination details before deployment.
